@@ -5,10 +5,10 @@ application:
       backend: http://uptime-kuma:3001/
   public_path:
     - /
-
 services:
   uptime-kuma:
     # louislam/uptime-kuma:2.5.0
+    # upstream: louislam/uptime-kuma:2.5.0
     image: docker.1ms.run/louislam/uptime-kuma:2.5.0
     binds:
       - /lzcapp/var/data:/app/data
