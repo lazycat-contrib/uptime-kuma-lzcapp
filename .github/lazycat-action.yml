@@ -1,0 +1,42 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/application.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: uptime-kuma
+
+build:
+  toolchains: []
+  run_buildscript: false
+
+images:
+  - id: uptime-kuma
+    target: service
+    service: uptime-kuma
+    source: louislam/uptime-kuma
+    channel: stable
+    delivery:
+      mode: mirror
+      image_template: docker.1ms.run/louislam/uptime-kuma:{tag}
+      require_digest_match: true
+
+stores:
+  official:
+    enabled: false
+    skip_if_version_exists: false
+    retry:
+      enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: Uptime Kuma
+    summary: Published from GitHub Actions

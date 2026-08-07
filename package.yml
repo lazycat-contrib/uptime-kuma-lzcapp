@@ -1,0 +1,18 @@
+package: community.lazycat.app.uptime-kuma
+version: 2.5.0
+name: Uptime Kuma
+description: A self-hosted monitoring tool for websites, APIs, and services.
+min_os_version: 1.5.0
+homepage: https://github.com/louislam/uptime-kuma
+author: louislam
+license: MIT
+locales:
+  zh:
+    name: Uptime Kuma
+    description: 自托管的网站、API 和服务监控工具。
+  en:
+    name: Uptime Kuma
+    description: A self-hosted monitoring tool for websites, APIs, and services.
+permissions:
+  required:
+    - net.internet
