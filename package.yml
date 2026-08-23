@@ -1,5 +1,5 @@
 package: community.lazycat.app.uptime-kuma
-version: 2.5.0
+version: 2.5.3
 name: Uptime Kuma
 description: A self-hosted monitoring tool for websites, APIs, and services.
 min_os_version: 1.5.0
