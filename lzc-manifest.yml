@@ -8,7 +8,7 @@ application:
 services:
   uptime-kuma:
     # louislam/uptime-kuma:2.5.0
-    # upstream: louislam/uptime-kuma:2.5.3
-    image: docker.1ms.run/louislam/uptime-kuma:2.5.3
+    # upstream: louislam/uptime-kuma:2.5.4
+    image: docker.1ms.run/louislam/uptime-kuma:2.5.4
     binds:
       - /lzcapp/var/data:/app/data
